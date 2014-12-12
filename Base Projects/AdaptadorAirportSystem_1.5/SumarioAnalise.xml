@@ -1,0 +1,24 @@
+<list>
+  <webservice.Webservice>
+    <id>1</id>
+    <Description>Servico 1</Description>
+    <targetName>http://jr.com/</targetName>
+    <Name>AirPortAnalisadorOneService</Name>
+    <url>http://localhost:8080/AirPortServices/AirPortAnalisadorOne?wsdl</url>
+    <Port>AirPortAnalisadorOnePort</Port>
+    <arguments>
+      <string>ValoresAnalise.xml</string>
+    </arguments>
+  </webservice.Webservice>
+  <webservice.Webservice>
+    <id>2</id>
+    <Description>Servico 2</Description>
+    <targetName>http://jr.com/</targetName>
+    <Name>AirPortAnalisadorTwoService</Name>
+    <url>http://localhost:8080/AirPortServices/AirPortAnalisadorTwo?wsdl</url>
+    <Port>AirPortAnalisadorTwoPort</Port>
+    <arguments>
+      <string>ValoresAnalisea.xml</string>
+    </arguments>
+  </webservice.Webservice>
+</list>
