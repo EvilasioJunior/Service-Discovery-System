@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="AirPortMonitorOne">
+      <implementation-class>com.jr.AirPortMonitorOne</implementation-class>
+    </service>
+    <service name="AirPortAnalisadorOne">
+      <implementation-class>com.jr.AirPortAnalisadorOne</implementation-class>
+    </service>
+    <service name="AirPortPlanejadorOne">
+      <implementation-class>com.jr.AirPortPlanejadorOne</implementation-class>
+    </service>
+    <service name="AirPortMonitorTwo">
+      <implementation-class>com.jr.AirPortMonitorTwo</implementation-class>
+    </service>
+    <service name="AirPortAnalisadorTwo">
+      <implementation-class>com.jr.AirPortAnalisadorTwo</implementation-class>
+    </service>
+    <service name="AirPortPlanejadorTwo">
+      <implementation-class>com.jr.AirPortPlanejadorTwo</implementation-class>
+    </service>
+    <service name="ServiceOne">
+      <implementation-class>com.jr.ServiceOne</implementation-class>
+    </service>
+    <service name="ServiceTwo">
+      <implementation-class>com.jr.ServiceTwo</implementation-class>
+    </service>
+  </services>
+  <clients/>
+  <jsr109>false</jsr109>
+</jax-ws>

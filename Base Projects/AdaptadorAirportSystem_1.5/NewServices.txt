@@ -1,4 +1,0 @@
-http://jr.com/
-AirPortMonitorOneService
-http://localhost:8080/AirPortServices/AirPortMonitorOne?wsdl
-AirPortMonitorOnePort

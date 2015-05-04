@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints version="2.0" xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
+  <endpoint implementation="com.jr.AirPortMonitorOne" name="AirPortMonitorOne" url-pattern="/AirPortMonitorOne"/>
+  <endpoint implementation="com.jr.AirPortAnalisadorOne" name="AirPortAnalisadorOne" url-pattern="/AirPortAnalisadorOne"/>
+  <endpoint implementation="com.jr.AirPortPlanejadorOne" name="AirPortPlanejadorOne" url-pattern="/AirPortPlanejadorOne"/>
+  <endpoint implementation="com.jr.AirPortMonitorTwo" name="AirPortMonitorTwo" url-pattern="/AirPortMonitorTwo"/>
+  <endpoint implementation="com.jr.AirPortAnalisadorTwo" name="AirPortAnalisadorTwo" url-pattern="/AirPortAnalisadorTwo"/>
+  <endpoint implementation="com.jr.AirPortPlanejadorTwo" name="AirPortPlanejadorTwo" url-pattern="/AirPortPlanejadorTwo"/>
+  <endpoint implementation="com.jr.ServiceOne" name="ServiceOne" url-pattern="/ServiceOne"/>
+  <endpoint implementation="com.jr.ServiceTwo" name="ServiceTwo" url-pattern="/ServiceTwo"/>
+</endpoints>
