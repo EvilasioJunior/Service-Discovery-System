@@ -72,8 +72,8 @@ public class Adapter {
          this.planners = planners;
     }
     
-    public void setlistExecution(List<Planning> executors){
-         this.planners = executors;
+    public void setlistExecution(List<Execution> executors){
+         this.executors = executors;
     }
         
     public void setObserverListAnalysis(List<Monitoring> lm){
