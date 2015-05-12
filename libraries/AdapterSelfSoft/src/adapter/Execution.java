@@ -14,12 +14,17 @@ import webservice.Webservice;
 public abstract class Execution {
     private File ValuesPlanning;
     private Webservice wExecution;
+    private String sOutPlanning = "";
    
     //Atributtes for Observer
     private Planning plannerObserved; 
     
     public File getValuesPlanning(){
         return this.ValuesPlanning;
+    }
+    
+    public String getOutPlannning(){
+        return this.sOutPlanning;
     }
     
     //Set new planner
@@ -40,9 +45,11 @@ public abstract class Execution {
     }
     
     //Method for Observer    
-    public void update(Planning m) {
-		if(m == plannerObserved){
+    public void update(Planning p) {
+		if(p == plannerObserved){
                     this.ValuesPlanning = plannerObserved.getValuesPlanning();
+                    if(plannerObserved.getOutPlannning().equals(""))
+                        this.sOutPlanning = plannerObserved.getOutPlannning();
                     execute();
 		}
 	}

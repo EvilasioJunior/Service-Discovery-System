@@ -23,6 +23,8 @@ public abstract class Analysis{
     private File ValuesMonitor;
     private File ValuesAnalysis;
     private Webservice wAnalysis;
+    private String sOutMonitoring = "";
+    private String sOutAnalysis = "";
     
     //Atributtes for Observer 
     private Monitoring monitorObserved;
@@ -39,6 +41,13 @@ public abstract class Analysis{
         return this.ValuesMonitor;
     }
     
+    public String getOutMonitoring(){
+        return this.sOutMonitoring;
+    }
+    
+    public String getOutAnalysis(){
+        return this.sOutAnalysis;
+    }
     //Set new Analyzer
     public void setAnalysis(Webservice wAnalysis){
         this.wAnalysis = wAnalysis;
@@ -61,6 +70,10 @@ public abstract class Analysis{
         }catch (IOException e){}
     }
     
+    public void setOutAnalysis(String sOutAnalysis){
+        this.sOutAnalysis = sOutAnalysis;
+    }
+    
     public void analyzeWebservice(){
         WSFuncs service = new WSFuncs();
         service.fService(wAnalysis, this.ValuesAnalysis.getAbsolutePath(), this.ValuesMonitor.getAbsolutePath());
@@ -70,6 +83,8 @@ public abstract class Analysis{
     public void update(Monitoring m) {
 		if(m == monitorObserved){
                     this.ValuesMonitor = monitorObserved.getValuesMonitor();
+                    if (monitorObserved.getOutMonitoring().equals(""))
+                        this.sOutMonitoring = monitorObserved.getOutMonitoring();
                     analyze();
 		}
 	}

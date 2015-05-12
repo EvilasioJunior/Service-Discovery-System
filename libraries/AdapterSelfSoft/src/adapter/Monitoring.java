@@ -24,6 +24,7 @@ public abstract class Monitoring{
     //Atributtes
     private File ValuesMonitor;
     private Webservice wMonitoring;
+    private String sOutMonitoring = "";
     private int time = 0;
     
     //Atributtes for Observer
@@ -37,6 +38,10 @@ public abstract class Monitoring{
     
     public int getTime(){
         return this.time;
+    }
+    
+    public String getOutMonitoring(){
+        return this.sOutMonitoring;
     }
     
     //Set new Monitor
@@ -57,6 +62,10 @@ public abstract class Monitoring{
         outMonitor.flush();
         outMonitor.close();
         }catch (IOException e){}
+    }
+    
+    public void setOutMonitoring (String sOutMonitoring){
+        this.sOutMonitoring = sOutMonitoring;
     }
     
     public void monitoringWebservice(){

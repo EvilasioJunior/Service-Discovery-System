@@ -24,6 +24,8 @@ public abstract class Planning{
     private File ValuesAnalysis;
     private File ValuesPlanning;
     private Webservice wPlanning;
+    private String sOutAnalysis = "";
+    private String sOutPlanning = "";
    
     //Atributtes for Observer
     private Analysis analyzerObserved;
@@ -37,6 +39,14 @@ public abstract class Planning{
     
     public File getValuesPlanning(){
         return this.ValuesPlanning;
+    }
+    
+    public String getOutAnalysis(){
+        return this.sOutAnalysis;
+    }
+    
+    public String getOutPlannning(){
+        return this.sOutPlanning;
     }
     
     //Set new planner
@@ -61,6 +71,10 @@ public abstract class Planning{
         }catch (IOException e){}
     }
     
+    public void setOutPlanning(String sOutPlanning){
+        this.sOutPlanning = sOutPlanning;
+    }
+    
     //Planning
     public void planWebservice(){
         WSFuncs service = new WSFuncs();
@@ -68,9 +82,11 @@ public abstract class Planning{
     }
     
     //Method for Observer    
-    public void update(Analysis m) {
-		if(m == analyzerObserved){
+    public void update(Analysis a) {
+		if(a == analyzerObserved){
                     this.ValuesAnalysis = analyzerObserved.getValueAnalysis();
+                    if(analyzerObserved.getOutAnalysis().equals(""))
+                        this.sOutAnalysis = analyzerObserved.getOutAnalysis();
                     plan();
 		}
 	}
